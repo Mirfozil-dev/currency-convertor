@@ -10,34 +10,30 @@ export let currencies = {};
 
 export const loadCurrencies = async () => {
   await getCurrencies().then((data) => {
-    if (data.success) {
-      const { rates } = data;
-      currencies = { ...rates };
-    }
+    const { rates } = data;
+    currencies = { ...rates };
   });
 };
 export const loadSymbols = async () => {
   await getSymbols().then(data => {
-    if (data.success) {
-      const { symbols } = data;
-      const selectLabel = document.createElement('option');
-      selectLabel.value = '';
-      selectLabel.text = 'Select currency';
-      selectLabel.selected = true;
-      inputSelect.appendChild(selectLabel);
-      mainTitle.innerHTML = 'Choose currency to be converted';
+    const { symbols } = data;
+    const selectLabel = document.createElement('option');
+    selectLabel.value = '';
+    selectLabel.text = 'Select currency';
+    selectLabel.selected = true;
+    inputSelect.appendChild(selectLabel);
+    mainTitle.innerHTML = 'Choose currency to be converted';
 
-      outputSelect.appendChild(selectLabel.cloneNode(true));
-      Object.entries(symbols).map(symbol => {
-        const option = document.createElement('option');
-        option.value = symbol[0];
-        option.text = symbol[1];
+    outputSelect.appendChild(selectLabel.cloneNode(true));
+    Object.entries(symbols).map(symbol => {
+      const option = document.createElement('option');
+      option.value = symbol[0];
+      option.text = symbol[1];
 
-        inputSelect.appendChild(option);
+      inputSelect.appendChild(option);
 
-        outputSelect.appendChild(option.cloneNode(true));
-      });
-    }
+      outputSelect.appendChild(option.cloneNode(true));
+    });
   });
 };
 export const calculate = (base, currency, val) => {
