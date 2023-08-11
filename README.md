@@ -3,7 +3,7 @@ This is a currency converter app made with HTML/SCSS and pure Javascript. No oth
 Fixer.io API.
 
 # How to run locally
-1 Step: Clone this repository \n
+1 Step: Clone this repository  
 2 Step: Then just open the index.html file in the root directory
 
 # Usage
