@@ -1,0 +1,33 @@
+.input-group {
+  display: flex;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 5px;
+
+  input, select {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+
+    &:not(:first-child) {
+      border-left: solid 1px #dcdcdc;
+    }
+  }
+}
+
+.notification {
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+
+  &.success {
+    background: darkgreen;
+    color: white;
+  }
+
+  &.error {
+    background: red;
+    color: white;
+  }
+}

@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 500;
+}
+
+.app {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+}
+.app__app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.3s opacity;
+}
+.app__loader {
+  width: 71px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+.app__notification {
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-30px);
+  transition: transform 0.3s;
+}
+.app__notification.active {
+  transform: translateY(0px);
+}
+.app.loading .app__app-content {
+  opacity: 0.1;
+}
+.app.loading .app__loader {
+  opacity: 1;
+}
+.app__secondary-title {
+  color: #747577;
+}
+.app__main-title {
+  color: #333333;
+  font-weight: 550;
+}
+.app__error-title {
+  color: #333333;
+  font-weight: 550;
+  text-align: center;
+  margin-top: 20px;
+}
+.app__text {
+  color: #7A7A7A;
+  font-size: 14px;
+}
+
+.input-group {
+  display: flex;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 5px;
+}
+.input-group input, .input-group select {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+}
+.input-group input:not(:first-child), .input-group select:not(:first-child) {
+  border-left: solid 1px #dcdcdc;
+}
+
+.notification {
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+}
+.notification.success {
+  background: darkgreen;
+  color: white;
+}
+.notification.error {
+  background: red;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

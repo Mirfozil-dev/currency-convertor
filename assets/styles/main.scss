@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 500;
+}
+
+.app {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+
+  &__app-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: .3s opacity;
+  }
+
+  &__loader {
+    width: 71px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    transition: .3s opacity;
+  }
+
+  &__notification {
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-30px);
+    transition: transform .3s;
+  }
+
+  &__notification.active {
+    transform: translateY(0px);
+  }
+
+  &.loading &__app-content {
+    opacity: .1;
+  }
+
+  &.loading &__loader {
+    opacity: 1;
+  }
+
+  &__secondary-title {
+    color: #747577;
+  }
+
+  &__main-title {
+    color: #333333;
+    font-weight: 550;
+  }
+
+  &__error-title {
+    color: #333333;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__text {
+    color: #7A7A7A;
+    font-size: 14px;
+  }
+}
+
+@import "_components.scss";
