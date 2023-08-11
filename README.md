@@ -7,7 +7,7 @@ Fixer.io API.
 2 Step: Then just open the index.html file in the root directory
 
 # Usage
-1 Step: Select the base currency
+1 Step: Select the base currency<br />
 2 Step: Select the currency to convert to
 3 Step: Enter value
 After the initial load, all rates are updated in real-time, so you don't need to wait for the rate to load each time you enter a value.
